@@ -1,6 +1,6 @@
-# https://hub.docker.com/_/microsoft-devcontainers-universal
-FROM mcr.microsoft.com/devcontainers/universal:2-linux
+# https://mcr.microsoft.com/en-us/product/devcontainers/base/about
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
 
-# Install Azure CLI
-# https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt
-RUN curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+# Install tmux and tmate
+RUN sudo apt update && \
+    sudo apt install -y tmux tmate
